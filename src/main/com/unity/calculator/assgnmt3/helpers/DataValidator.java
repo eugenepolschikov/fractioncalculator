@@ -25,7 +25,23 @@ public class DataValidator {
 
         return pattern.matcher(str).matches();
 
+    }
 
+    public static boolean fractionOperationValidation(String op){
+        return  op.matches( "[-+*/]" );
+    }
+
+
+    /**
+     * method for analysis of Integer user input
+     */
+    public static boolean isInteger(String str){
+        try {
+            int d = Integer.parseInt(str);
+        } catch (NumberFormatException nfe) {
+            return false;
+        }
+        return true;
     }
 
 

@@ -9,7 +9,7 @@ import java.util.Map;
 /**
  * Created by ypolshchykau on 27.11.2014.
  */
-public class OperationsMapper {
+public class BaseCalcOperationsMapper {
 
 
     private static Map<String, BinaryOperation> operations = new HashMap<String, BinaryOperation>();

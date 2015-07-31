@@ -1,7 +1,8 @@
 package main.com.unity.calculator.assgnmt3;
 
 
-import main.com.unity.calculator.assgnmt3.logic.Calculator;
+
+import main.com.unity.calculator.assgnmt3.logic.FractionCalculator;
 import main.com.unity.calculator.assgnmt3.logic.InputData;
 
 /**
@@ -17,13 +18,11 @@ public class Runner
 
         InputData dataForCalculation= new InputData();
 
-        dataForCalculation.numbersAndOperationInput();
+        dataForCalculation.inputFractionsAndOperationData();
+        FractionCalculator fractionCalculator = new FractionCalculator();
+        fractionCalculator.calculate(dataForCalculation.getLeftFraction(),dataForCalculation.getRightFraction(),
+                dataForCalculation.getFractionOperation());
+        fractionCalculator.printAnswer();
 
-        Calculator calculation= new Calculator();
-
-        calculation.calculate(dataForCalculation.getLeftNumber(),dataForCalculation.getRightNumber(),
-                dataForCalculation.getOperation());
-
-        calculation.printAnswer();
     }
 }
